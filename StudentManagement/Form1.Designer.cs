@@ -28,18 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudentRegistration));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.grpStudentDetails = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnNew = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.PictureBox();
+            this.lblID = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.PictureBox();
+            this.dateDOB = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.PictureBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.rbFeMale = new System.Windows.Forms.RadioButton();
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDOB = new System.Windows.Forms.TextBox();
-            this.txtCity = new System.Windows.Forms.ComboBox();
+            this.cmbCity = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.chkPHD = new System.Windows.Forms.CheckBox();
             this.chkPG = new System.Windows.Forms.CheckBox();
@@ -49,12 +59,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewStudents = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.errorName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorCity = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorDate = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorAddress = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.grpStudentDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNew)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorAddress)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -79,16 +98,23 @@
             // 
             // grpStudentDetails
             // 
+            this.grpStudentDetails.Controls.Add(this.label11);
+            this.grpStudentDetails.Controls.Add(this.btnNew);
+            this.grpStudentDetails.Controls.Add(this.label10);
+            this.grpStudentDetails.Controls.Add(this.btnUpdate);
+            this.grpStudentDetails.Controls.Add(this.lblID);
+            this.grpStudentDetails.Controls.Add(this.label9);
+            this.grpStudentDetails.Controls.Add(this.btnDelete);
+            this.grpStudentDetails.Controls.Add(this.dateDOB);
             this.grpStudentDetails.Controls.Add(this.label8);
-            this.grpStudentDetails.Controls.Add(this.pictureBox1);
+            this.grpStudentDetails.Controls.Add(this.btnSave);
             this.grpStudentDetails.Controls.Add(this.txtAddress);
             this.grpStudentDetails.Controls.Add(this.label7);
             this.grpStudentDetails.Controls.Add(this.rbFeMale);
             this.grpStudentDetails.Controls.Add(this.rbMale);
             this.grpStudentDetails.Controls.Add(this.label6);
             this.grpStudentDetails.Controls.Add(this.label5);
-            this.grpStudentDetails.Controls.Add(this.txtDOB);
-            this.grpStudentDetails.Controls.Add(this.txtCity);
+            this.grpStudentDetails.Controls.Add(this.cmbCity);
             this.grpStudentDetails.Controls.Add(this.txtName);
             this.grpStudentDetails.Controls.Add(this.chkPHD);
             this.grpStudentDetails.Controls.Add(this.chkPG);
@@ -104,6 +130,109 @@
             this.grpStudentDetails.TabStop = false;
             this.grpStudentDetails.Text = "Add Student Details";
             this.grpStudentDetails.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(1184, 278);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(45, 23);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "New";
+            // 
+            // btnNew
+            // 
+            this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
+            this.btnNew.Location = new System.Drawing.Point(1154, 178);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(99, 97);
+            this.btnNew.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnNew.TabIndex = 27;
+            this.btnNew.TabStop = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(1037, 278);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 23);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Update";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.Location = new System.Drawing.Point(1013, 178);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(99, 97);
+            this.btnUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnUpdate.TabIndex = 25;
+            this.btnUpdate.TabStop = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(687, 224);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(41, 20);
+            this.lblID.TabIndex = 24;
+            this.lblID.Text = "lblID";
+            this.lblID.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(1184, 142);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 23);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Delete";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(1154, 42);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(99, 97);
+            this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.TabStop = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // dateDOB
+            // 
+            this.dateDOB.CustomFormat = "yyyy-MM-dd";
+            this.dateDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateDOB.Location = new System.Drawing.Point(113, 202);
+            this.dateDOB.Name = "dateDOB";
+            this.dateDOB.Size = new System.Drawing.Size(299, 27);
+            this.dateDOB.TabIndex = 21;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(1037, 142);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 23);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Save";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(1013, 42);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(99, 97);
+            this.btnSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSave.TabIndex = 19;
+            this.btnSave.TabStop = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtAddress
             // 
@@ -163,20 +292,18 @@
             this.label5.Text = "D.O.B";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // txtDOB
+            // cmbCity
             // 
-            this.txtDOB.Location = new System.Drawing.Point(114, 200);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Size = new System.Drawing.Size(298, 27);
-            this.txtDOB.TabIndex = 12;
-            // 
-            // txtCity
-            // 
-            this.txtCity.FormattingEnabled = true;
-            this.txtCity.Location = new System.Drawing.Point(113, 95);
-            this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(299, 28);
-            this.txtCity.TabIndex = 11;
+            this.cmbCity.FormattingEnabled = true;
+            this.cmbCity.Items.AddRange(new object[] {
+            "Panadura",
+            "Colombo",
+            "Kaluthara",
+            "Piliyandala"});
+            this.cmbCity.Location = new System.Drawing.Point(113, 95);
+            this.cmbCity.Name = "cmbCity";
+            this.cmbCity.Size = new System.Drawing.Size(299, 28);
+            this.cmbCity.TabIndex = 11;
             // 
             // txtName
             // 
@@ -257,6 +384,7 @@
             // 
             this.dataGridViewStudents.AllowUserToAddRows = false;
             this.dataGridViewStudents.AllowUserToDeleteRows = false;
+            this.dataGridViewStudents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewStudents.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewStudents.Location = new System.Drawing.Point(12, 412);
@@ -266,26 +394,23 @@
             this.dataGridViewStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewStudents.Size = new System.Drawing.Size(1340, 364);
             this.dataGridViewStudents.TabIndex = 2;
+            this.dataGridViewStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudents_CellClick);
             // 
-            // pictureBox1
+            // errorName
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1002, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 113);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
+            this.errorName.ContainerControl = this;
             // 
-            // label8
+            // errorCity
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(1037, 142);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 23);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Save";
+            this.errorCity.ContainerControl = this;
+            // 
+            // errorDate
+            // 
+            this.errorDate.ContainerControl = this;
+            // 
+            // errorAddress
+            // 
+            this.errorAddress.ContainerControl = this;
             // 
             // frmStudentRegistration
             // 
@@ -302,8 +427,15 @@
             this.panel1.PerformLayout();
             this.grpStudentDetails.ResumeLayout(false);
             this.grpStudentDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNew)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudents)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorCity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorAddress)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -318,8 +450,7 @@
         private Label label3;
         private Label label2;
         private Label label5;
-        private TextBox txtDOB;
-        private ComboBox txtCity;
+        private ComboBox cmbCity;
         private TextBox txtName;
         private CheckBox chkPHD;
         private CheckBox chkPG;
@@ -331,6 +462,18 @@
         private RadioButton rbMale;
         private Label label6;
         private Label label8;
-        private PictureBox pictureBox1;
+        private PictureBox btnSave;
+        private DateTimePicker dateDOB;
+        private Label label9;
+        private PictureBox btnDelete;
+        private Label lblID;
+        private Label label10;
+        private PictureBox btnUpdate;
+        private Label label11;
+        private PictureBox btnNew;
+        private ErrorProvider errorName;
+        private ErrorProvider errorCity;
+        private ErrorProvider errorDate;
+        private ErrorProvider errorAddress;
     }
 }
